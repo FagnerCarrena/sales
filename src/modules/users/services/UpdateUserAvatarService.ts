@@ -26,11 +26,11 @@ throw new AppError('User not found.')
 }
 
 if(user.avatar){
-const userAvatarfilePath = path.join(uploadConfig.directory, user.avatar);
-const userAvatarfileExists = await fs.promises.stat(userAvatarfilePath);
+const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);
+const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath);
 
-if(userAvatarfileExists){
-await fs.promises.unlink(userAvatarfilePath);
+if(userAvatarFileExists){
+await fs.promises.unlink(userAvatarFilePath);
 }
 
 }
